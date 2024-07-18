@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookAppointmentBtn</title>
+</head>
+<body>
+    
+    <h1>This is the Clinical update data</h1>
+    <label for="patientId">PatientId</label>
+    <input type="text" id="patientId" name="patientId" placeholder="Enter patientId"><br/><br/>
+    <label for="doctorId">PatientId</label>
+    <input type="text" id="doctorId" name="doctorId" placeholder="Enter doctorId"><br/><br/>
+    <label for="date">date</label>
+    <input type="text" id="date" name="date" placeholder="Enter date"><br/><br/>
+    <label for="Time">Time</label>
+    <input type="text" id="Time" name="Time" placeholder="Enter Time"><br/><br/>
+    <button id="bookAppointmentBtn">bookAppointmentBtn</button>
+
+    <script>
+document.getElementById('bookAppointmentBtn').addEventListener('click', function() {
+const patientId = document.getElementById('patientId').value;
+const doctorId = document.getElementById('doctorId').value;
+const date = document.getElementById('date').value;
+const time = document.getElementById('time').value;
+bookAppointment(patientId, doctorId, date, time);
+});
+function bookAppointment(patientId, doctorId, date, time) {
+console.log(`Appointment booked for patient ${patientId} with doctor ${doctorId} on ${date} at ${time}`);
+ }
+
+    </script>
+
+</body>
+</html>

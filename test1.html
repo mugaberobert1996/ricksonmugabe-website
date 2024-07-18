@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adding anew patient</title>
+</head>
+<body bgcolor="skyblue">
+    <h1>THIS IS THE SUBMITION OF PATIENTID AND DOCTORID WHITH DATE AND TIME ARRIVAL</h1>
+
+    <label for="patientname">Patientname</label>
+    <input type="text" id="patientname" name="patientname" placeholder="Enter patientname"><br/><br/>
+    <label for="email">email</label>
+    <input type="text" id="email" name="email" placeholder="Enter email"><br/><br/>
+    <label for="phone">phone</label>
+    <input type="text" id="phone" name="phone" placeholder="Enter phone"><br/><br/>
+    <label for="dob">dob</label>
+    <input type="text" id="dob" name="dob" placeholder="Enter dob"><br/><br/>
+    <button id="addPatientForm">Submit</button>
+    <p id="addPatientForm"></p>
+
+    <script>
+document.getElementById("addPatientForm").addEventListener("click",function(event){
+    event.preventDefault(); 
+    const name =document.getElementById('patientname').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const dob = document.getElementById('dob').value;
+    addPatient(name, email, phone, dob);
+    alert(addPatientForm);
+});
+
+function addPatient(name, email, phone, dob) {
+console.log('addPatient: Name ${name}, Email  ${email}, Phone ${phone}, DOB ${dob}');
+ }
+    </script>
+    
+</body>
+</html>

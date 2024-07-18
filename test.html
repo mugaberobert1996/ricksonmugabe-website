@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookAppointment</title>
+</head>
+<body bgcolor="skyblue">
+    <h1>THIS IS THE SUBMITION OF PATIENTID AND DOCTORID WHITH DATE AND TIME ARRIVAL</h1>
+
+    <label for="patientId">PatientId</label>
+    <input type="text" id="patientId" name="PatientId" placeholder="Enter PatientId"><br/><br/>
+    <label for="doctorId">DoctorId</label>
+    <input type="text" id="doctorId" name="doctorId" placeholder="Enter DoctorId"><br/><br/>
+    <label for="date">Date</label>
+    <input type="text" id="date" name="date" placeholder="Enter Date"><br/><br/>
+    <label for="time">Time</label>
+    <input type="text" id="time" name="time" placeholder="Enter Time"><br/><br/>
+    <button id="bookAppointment">Submit</button>
+    <p id="bookAppointment"></p>
+
+    <script>
+document.getElementById("bookAppointment").addEventListener("click",function(){
+    const patientId =document.getElementById('patientId').value;
+    const doctorId =document.getElementById('doctorId').value;
+    const date =document.getElementById('date').value;
+    const time =document.getElementById('time').value;
+
+    function bookAppointment(patientId,doctorId,date,time){
+console.log('patientId &{patientId} for doctorId &{doctorId} on date &{date} at time &{time}');
+    }
+    alert(patientId,doctorId,date,time);
+})
+
+
+
+
+    </script>
+    
+</body>
+</html>
